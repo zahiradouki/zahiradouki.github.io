@@ -13,46 +13,54 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f7fb;
-      color: #1f2937;
-      line-height: 1.6;
+      font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+      background: #fff7fb;
+      color: #2d1b2f;
+      line-height: 1.7;
     }
 
     header {
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      background: linear-gradient(135deg, #7c3aed, #ec4899);
       color: white;
-      padding: 70px 20px;
+      padding: 85px 20px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 48px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 54px;
       margin: 0;
+      letter-spacing: 1px;
     }
 
     header p {
       font-size: 18px;
-      max-width: 700px;
-      margin: 15px auto;
+      max-width: 750px;
+      margin: 18px auto;
     }
 
     .buttons a {
       display: inline-block;
       margin: 10px;
-      padding: 12px 20px;
+      padding: 13px 22px;
       border-radius: 30px;
       background: white;
-      color: #2563eb;
+      color: #db2777;
       text-decoration: none;
       font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .buttons a:hover {
+      background: #fce7f3;
+      transform: translateY(-3px);
     }
 
     nav {
       background: white;
-      padding: 15px;
+      padding: 16px;
       text-align: center;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+      box-shadow: 0 4px 18px rgba(219, 39, 119, 0.12);
       position: sticky;
       top: 0;
       z-index: 10;
@@ -60,54 +68,65 @@
 
     nav a {
       margin: 0 15px;
-      color: #1f2937;
+      color: #7c3aed;
       text-decoration: none;
       font-weight: bold;
     }
 
+    nav a:hover {
+      color: #db2777;
+    }
+
     .container {
-      max-width: 1000px;
+      max-width: 1050px;
       margin: auto;
-      padding: 40px 20px;
+      padding: 45px 20px;
     }
 
     section {
       background: white;
-      padding: 30px;
-      border-radius: 20px;
-      margin-bottom: 25px;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      padding: 32px;
+      border-radius: 24px;
+      margin-bottom: 28px;
+      box-shadow: 0 10px 30px rgba(124, 58, 237, 0.08);
+      border: 1px solid #fbcfe8;
     }
 
     h2 {
-      color: #2563eb;
+      color: #db2777;
       margin-top: 0;
-      font-size: 28px;
+      font-size: 30px;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    h3 {
+      color: #7c3aed;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 18px;
     }
 
     .card {
-      background: #f9fafb;
-      padding: 20px;
-      border-radius: 15px;
-      border: 1px solid #e5e7eb;
+      background: #fff7fb;
+      padding: 22px;
+      border-radius: 18px;
+      border: 1px solid #f9a8d4;
+      transition: 0.3s;
     }
 
-    .card h3 {
-      margin-top: 0;
-      color: #1e3a8a;
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 22px rgba(219, 39, 119, 0.15);
     }
 
     .skills span {
       display: inline-block;
-      background: #dbeafe;
-      color: #1d4ed8;
-      padding: 9px 15px;
+      background: #fce7f3;
+      color: #be185d;
+      padding: 10px 16px;
       border-radius: 25px;
       margin: 6px;
       font-size: 14px;
@@ -115,39 +134,49 @@
     }
 
     .timeline {
-      border-left: 4px solid #2563eb;
-      padding-left: 20px;
+      border-left: 4px solid #ec4899;
+      padding-left: 22px;
     }
 
     .timeline-item {
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
-    .timeline-item h3 {
-      margin-bottom: 5px;
-      color: #1e3a8a;
+    .quote {
+      background: linear-gradient(135deg, #fce7f3, #ede9fe);
+      padding: 25px;
+      border-radius: 20px;
+      font-style: italic;
+      color: #581c87;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    a {
+      color: #db2777;
+      font-weight: bold;
     }
 
     footer {
       text-align: center;
-      padding: 25px;
-      background: #1f2937;
+      padding: 28px;
+      background: #2d1b2f;
       color: white;
       margin-top: 40px;
     }
 
-    a {
-      color: #2563eb;
-    }
-
     @media (max-width: 600px) {
       header h1 {
-        font-size: 34px;
+        font-size: 38px;
       }
 
       nav a {
         display: inline-block;
         margin: 8px;
+      }
+
+      section {
+        padding: 24px;
       }
     }
   </style>
@@ -173,6 +202,7 @@
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
     <a href="#goals">Goals</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -190,6 +220,12 @@
         My main academic interest is Computer Science, especially the use of
         AI and automation to solve real problems and make daily tasks easier.
       </p>
+    </section>
+
+    <section>
+      <div class="quote">
+        “I believe that consistent learning, discipline, and real projects can open doors to better opportunities.”
+      </div>
     </section>
 
     <section id="skills">
